@@ -33,7 +33,7 @@ do
     fileToBeIgnored=`cat ignoreFileNameList|grep "$file"|wc -l`
     if [ $fileToBeIgnored -eq "0" ] then
         echo "FileName $file present in ignore file, hence ignoring it."
-    elif
+    else
         echo "Assembling file $file."
         fileName=`echo $file|awk -F "." '{print $1}'`
         outputFile="$fileName.$outputFileType"
