@@ -14,7 +14,7 @@ jmp $
 
 %include "printString.asm"
 %include "gdt.asm"
-%inclue "printStringPm.asm"
+%include "printStringPm.asm"
 %include "protectedMode.asm"
 
 [bits 32]
