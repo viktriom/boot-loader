@@ -1,0 +1,100 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		ED8403A81D23D4A3004CAF3B /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build.sh; path = src/build.sh; sourceTree = "<group>"; };
+		ED8983D41D1C5E79001FFF1D /* gdt.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = gdt.asm; path = src/gdt.asm; sourceTree = "<group>"; };
+		EDB0E02B1D1E6E390039C2AC /* bootLoader.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = bootLoader.asm; path = src/bootLoader.asm; sourceTree = "<group>"; };
+		EDB0E02C1D1E6E390039C2AC /* final.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = final.asm; path = src/final.asm; sourceTree = "<group>"; };
+		EDB0E02E1D1E6E390039C2AC /* helloSystem.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = helloSystem.asm; path = src/helloSystem.asm; sourceTree = "<group>"; };
+		EDB0E02F1D1E6E390039C2AC /* ifblock.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = ifblock.asm; path = src/ifblock.asm; sourceTree = "<group>"; };
+		EDB0E0301D1E6E390039C2AC /* myfirst.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = myfirst.asm; path = src/myfirst.asm; sourceTree = "<group>"; };
+		EDB0E0311D1E6E390039C2AC /* printString.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = printString.asm; path = src/printString.asm; sourceTree = "<group>"; };
+		EDB0E0321D1E6E390039C2AC /* printStringPm.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = printStringPm.asm; path = src/printStringPm.asm; sourceTree = "<group>"; };
+		EDB0E0331D1E6E390039C2AC /* printStringPmTest.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = printStringPmTest.asm; path = src/printStringPmTest.asm; sourceTree = "<group>"; };
+		EDB0E0341D1E6E390039C2AC /* printTest.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = printTest.asm; path = src/printTest.asm; sourceTree = "<group>"; };
+		EDB0E0351D1E6E390039C2AC /* printTestNew.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = printTestNew.asm; path = src/printTestNew.asm; sourceTree = "<group>"; };
+		EDB0E0361D1E6E390039C2AC /* protectedMode.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = protectedMode.asm; path = src/protectedMode.asm; sourceTree = "<group>"; };
+		EDB0E0371D1E6E390039C2AC /* stack.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; name = stack.asm; path = src/stack.asm; sourceTree = "<group>"; };
+		EDB0E0381D1E6E390039C2AC /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = test.c; path = src/test.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		ED8983CD1D1C5E39001FFF1D = {
+			isa = PBXGroup;
+			children = (
+				ED8403A81D23D4A3004CAF3B /* build.sh */,
+				EDB0E02B1D1E6E390039C2AC /* bootLoader.asm */,
+				EDB0E02C1D1E6E390039C2AC /* final.asm */,
+				EDB0E02E1D1E6E390039C2AC /* helloSystem.asm */,
+				EDB0E02F1D1E6E390039C2AC /* ifblock.asm */,
+				EDB0E0301D1E6E390039C2AC /* myfirst.asm */,
+				EDB0E0311D1E6E390039C2AC /* printString.asm */,
+				EDB0E0321D1E6E390039C2AC /* printStringPm.asm */,
+				EDB0E0331D1E6E390039C2AC /* printStringPmTest.asm */,
+				EDB0E0341D1E6E390039C2AC /* printTest.asm */,
+				EDB0E0351D1E6E390039C2AC /* printTestNew.asm */,
+				EDB0E0361D1E6E390039C2AC /* protectedMode.asm */,
+				EDB0E0371D1E6E390039C2AC /* stack.asm */,
+				EDB0E0381D1E6E390039C2AC /* test.c */,
+				ED8983D41D1C5E79001FFF1D /* gdt.asm */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		ED8983CE1D1C5E39001FFF1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+			};
+			buildConfigurationList = ED8983D11D1C5E39001FFF1D /* Build configuration list for PBXProject "os" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED8983CD1D1C5E39001FFF1D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		ED8983D21D1C5E39001FFF1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		ED8983D31D1C5E39001FFF1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED8983D11D1C5E39001FFF1D /* Build configuration list for PBXProject "os" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED8983D21D1C5E39001FFF1D /* Debug */,
+				ED8983D31D1C5E39001FFF1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED8983CE1D1C5E39001FFF1D /* Project object */;
+}
