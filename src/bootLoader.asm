@@ -12,10 +12,10 @@ call switch_to_pm	;note that we never return from here.
 
 jmp $
 
-%include "../print/print_string.asm"
+%include "printString.asm"
 %include "gdt.asm"
-%inclue "print_string_pm.asm"
-%include "switch_to_pm"
+%inclue "printStringPm.asm"
+%include "protectedMode.asm"
 
 [bits 32]
 
