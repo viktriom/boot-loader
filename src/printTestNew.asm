@@ -3,10 +3,10 @@
 [org 0x7c00]
 
 mov ebx ,helloMsg
-call printString
+call print_string_real
 
 mov ebx,byeMsg
-call printString
+call print_string_real
 
 ;jmp $
 
