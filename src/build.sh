@@ -10,6 +10,11 @@ inputFileType=".asm"
 outputFileType=".bin"
 sourceDir="/home/pi/dev/wrk/os/src"
 outputDir="/home/pi/dev/wrk/os/bin"
+projectHome="/home/pi/dev/wrk/os"
+
+echo "Getting the changes from the repository."
+cd $projectHome
+git pull
 
 echo "Working with source dir = $sourceDir and output dir = $outputDir"
 
