@@ -18,7 +18,7 @@ git pull
 
 echo "Working with source dir = $sourceDir and output dir = $outputDir"
 
-echo "Entering the source dir."
+echo "Entering the source dir : $sourceDir"
 cd $sourceDir;
 
 files=`ls|grep $inputFileType`
