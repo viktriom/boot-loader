@@ -11,15 +11,17 @@ outputFileType=".bin"
 sourceDir="/home/pi/dev/wrk/os/src"
 outputDir="/home/pi/dev/wrk/os/bin"
 projectHome="/home/pi/dev/wrk/os"
+ignoreFileNameList="/home/pi/dev/wrk/os/ignore.list"
 
-echo "Getting the changes from the repository."
+echo "Overwriting local changes with repository changes."
 cd $projectHome
-git pull
+git fetch --all
+git reset --hard origin/master
 
 echo "Working with source dir = $sourceDir and output dir = $outputDir"
 
 echo "Entering the source dir : $sourceDir"
-cd $sourceDir;
+cd $sourceDir
 
 files=`ls|grep $inputFileType`
 
@@ -28,7 +30,13 @@ rm -r $outputDir/*$outputFileType
 
 for file in $files
 do
-    fileName=`echo $file|awk -F "." '{print $1}'`
-    outputFile="$fileName.$outputFileType"
-    nasm -o $outputDir/$outputFile -f bin ./$file
+    fileToBeIgnored=`cat ignoreFileNameList|grep "$file"|wc -l`
+    if [ $fileToBeIgnored -eq "0" ] then
+        echo "FileName $file present in ignore file, hence ignoring it."
+    elif
+        echo "Assembling file $file."
+        fileName=`echo $file|awk -F "." '{print $1}'`
+        outputFile="$fileName.$outputFileType"
+        nasm -o $outputDir/$outputFile -f bin ./$file
+    fi
 done
