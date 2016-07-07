@@ -17,6 +17,7 @@ shouldPullFromRepo=" "
 
 if [ $# -gt 0 ]; then
     shouldPullFromRepo=$1
+    echo "value of shouldPullFromRepo = $shouldPullFromRepo"
 else
     echo "-----------------------------------------------------"
     echo "No command line parameter provided, source files will not be refreshed."
@@ -26,7 +27,7 @@ else
     echo "-------------------------------------------------------"
 fi
 
-if [ $shouldPullFromRepo -eq "pull" ]; then
+if [ "$shouldPullFromRepo" = "pull" ]; then
     echo "Pulling sources form repo, local changes will be overwritten with repository changes."
     cd $projectHome
     git fetch --all
