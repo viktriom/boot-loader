@@ -53,7 +53,7 @@ do
     if [ $fileToBeIgnored -eq "0" ]; then
         echo "Assembling file $file"
         fileName=`echo $file|awk -F "." '{print $1}'`
-        outputFile="$fileName.$outputFileType"
+        outputFile="$fileName$outputFileType"
         nasm -o $outputDir/$outputFile -f bin ./$file
     else
         echo "FileName $file present in ignore file, hence ignoring it."
