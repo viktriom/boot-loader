@@ -11,7 +11,7 @@ outputFileType=".bin"
 sourceDir="/home/pi/dev/wrk/os/src"
 outputDir="/home/pi/dev/wrk/os/bin"
 projectHome="/home/pi/dev/wrk/os"
-ignoreFileNameList="/home/pi/dev/wrk/os/ignore.list"
+ignoreFileNameList="/home/pi/dev/wrk/os/src/ignore.list"
 shouldPullFromRepo=" "
 
 
@@ -51,7 +51,7 @@ for file in $files
 do
     fileToBeIgnored=`cat $ignoreFileNameList|grep "$file"|wc -l`
     if [ $fileToBeIgnored -eq "0" ]; then
-        echo "Assembling file $file."
+        echo "Assembling file $file"
         fileName=`echo $file|awk -F "." '{print $1}'`
         outputFile="$fileName.$outputFileType"
         nasm -o $outputDir/$outputFile -f bin ./$file
