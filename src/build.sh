@@ -24,19 +24,21 @@ if [ $# -gt 0 ]; then
     shouldPullFromRepo=$1
     echo "value of shouldPullFromRepo = $shouldPullFromRepo"
 else
-    echo "-----------------------------------------------------"
+    echo "------------------------------------------------------------------------------"
     echo "No command line parameter provided, source files will not be refreshed."
     echo "Provide pull as the first command line parameter to pull the changes from the remote repo."
     echo "Be mindfull that all the changes will be overwritten with remote repo while pulling."
     echo "NO CHANGES WILL BE PULLED"
-    echo "-------------------------------------------------------"
+    echo "------------------------------------------------------------------------------"
 fi
 
 if [ "$shouldPullFromRepo" = "pull" ]; then
-    echo "Pulling sources form repo, local changes will be overwritten with repository changes."
+    echo "-------------------------Pulling in remote changes----------------------------"
+    echo "Local changes will be overwritten with repository changes."
     cd $projectHome
     git fetch --all
     git reset --hard origin/master
+    echo "-------------------------Done pulling the chagens------------------------------"
 else
     echo "INCORRECT first parameter provided."
     echo "The firt parameter should be \"pull\" if you want the script to overwrite the local sources with remote repo data."
@@ -52,6 +54,8 @@ files=`ls|grep $inputFileType`
 echo "Clearing the output directory $outputDir"
 rm -r $outputDir/*$outputFileType
 
+echo "-------------------------Assembling the source files----------------------------"
+
 for file in $files
 do
     fileToBeIgnored=`cat $ignoreFileNameList|grep "$file"|wc -l`
@@ -64,3 +68,4 @@ do
         echo "FileName $file present in ignore file, hence ignoring it."
     fi
 done
+echo "-------------------------Done assembling the source files----------------------------"
