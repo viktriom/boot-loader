@@ -6,12 +6,17 @@
 #  Created by Vivek Tripathi on 29/06/16.
 #
 
+echo "shell script path = $0"
+
+baseDir=$(pwd)
+echo "base dir = $baseDir"
+projectHome=$(dirname "$baseDir")
+echo "project home dir = $projectHome"
 inputFileType=".asm"
 outputFileType=".bin"
-sourceDir="/home/pi/dev/wrk/os/src"
-outputDir="/home/pi/dev/wrk/os/bin"
-projectHome="/home/pi/dev/wrk/os"
-ignoreFileNameList="/home/pi/dev/wrk/os/src/ignore.list"
+sourceDir="$projectHome/src"
+outputDir="$projectHome/bin"
+ignoreFileNameList="$sourceDir/ignore.list"
 shouldPullFromRepo=" "
 
 

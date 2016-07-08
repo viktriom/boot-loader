@@ -15,7 +15,7 @@ call print_string_real
 ;Data
 
 helloMsg:
-db 'Hello, world!!!', 0
+db 'Hello, world!!!\n', 0
 
 byeMsg:
 db 'Good Bye!!', 0
