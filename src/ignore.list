@@ -1,2 +1,4 @@
 protectedMode.asm
 bootLoader.asm
+grub.s
+shared.h

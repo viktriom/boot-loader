@@ -11,6 +11,7 @@ BEGIN_PM:
 mov ebx, MSG
 call print_string_pm
 
+%include "printString.asm"
 %include "printStringPm.asm"
 %include "protectedMode.asm"
 %include "gdt.asm"
