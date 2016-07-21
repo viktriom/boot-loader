@@ -34,9 +34,9 @@ mov ax, DATA_SEG	;Now in PM, our old segments are meaningless.
 mov ds, ax          ;so we point our segment registers to the
 mov ss, ax          ;data we define is our GDT
 
-mov es,ax
-mov fs,ax
-mov gs,ax
+mov es, ax
+mov fs, ax
+mov gs, ax
 
 mov ebp, 0x90000	;Update our stack position so it is right 
 mov esp, ebp 		;at the top of the free space.
